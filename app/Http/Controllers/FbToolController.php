@@ -8,6 +8,7 @@ class FbToolController extends Controller
 {
     public function index() {
 
+      dd('ggg');
         $fb = new \Facebook\Facebook([
             'app_id' => '468826893884303',           //Replace {your-app-id} with your app ID
             'app_secret' => 'e4c7e05848fc07fb3aff81aadcb3cf4b',   //Replace {your-app-secret} with your app secret
