@@ -46,6 +46,7 @@ class FbToolController extends Controller
         return view('home');
     }
     public function webhook() {
+      $appsecret = 'e4c7e05848fc07fb3aff81aadcb3cf4b';
       $raw_post_data = file_get_contents('php://input');
       $header_signature = header('X-Hub-Signature');
 
@@ -61,5 +62,7 @@ if(
 if (hash_equals($signature, $expected_signature)) {
   echo('SIGNATURE_VERIFIED');
 }
+echo('fail');
+
     }
 }
