@@ -46,7 +46,7 @@ class FbToolController extends Controller
         return view('home');
     }
     public function webhook() {
-        $dir = '/app/public/file';
+        $dir = '../app/public/file';
        
         // // fwrite($handle,'hahaha');
         // // fclose($handle);
