@@ -47,10 +47,10 @@ class FbToolController extends Controller
     }
     public function webhook() {
         $dir = '../app/public/file';
-       
-        // // fwrite($handle,'hahaha');
-        // // fclose($handle);
-        // dd('die');
+        $handle = fopen($dir.'/data.txt','w');
+        fwrite($handle,'hahaha');
+        fclose($handle);
+        dd('die');
       if (isset($_GET['hub_mode']) && isset($_GET['hub_challenge']) && isset($_GET['hub_verify_token'])) {
         if ($_GET['hub_verify_token'] == 'my_verify_token')
         echo $_GET['hub_challenge'];
