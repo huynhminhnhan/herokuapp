@@ -12,3 +12,4 @@
 */
 
 Route::get('/','FbToolController@index');
+Route::get('/webhook','FbToolController@webhook');
